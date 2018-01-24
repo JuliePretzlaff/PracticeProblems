@@ -67,6 +67,8 @@ namespace PracticeProblems
 
             Console.WriteLine("Welcome to the Countries Game!  Hit any key to begin");
             Console.ReadLine();
+            var start = DateTime.Now;
+
             string[] countries = new string[25];
 
             for(int i = 0; i < countries.Length; i++)
@@ -74,6 +76,14 @@ namespace PracticeProblems
                 Console.WriteLine("Please enter a country name: ");
                 countries[i] = Console.ReadLine();
             }
+
+            var end = DateTime.Now;
+            var duration = end - start;
+
+            Console.WriteLine("It took you {0} to name 25 countries!", duration);
+
+            Console.WriteLine("Here's every other country you named: ");
+
             for(int i =0; i < countries.Length; i++)
             {
                 int divisionTest = i % 2;
