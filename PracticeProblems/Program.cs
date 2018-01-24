@@ -63,37 +63,55 @@ namespace PracticeProblems
             //Console.WriteLine("{0} had ${1} in their wallet before they bought a salad.", name, (saladCost +  remainingCash));
 
 
-            //Loop Homework
+            ////Loop Homework
 
-            Console.WriteLine("Welcome to the Countries Game!  Hit any key to begin");
-            Console.ReadLine();
-            var start = DateTime.Now;
+            //Console.WriteLine("Welcome to the Countries Game!  Hit any key to begin");
+            //Console.ReadLine();
+            //var start = DateTime.Now;
 
-            string[] countries = new string[25];
+            //string[] countries = new string[25];
 
-            for(int i = 0; i < countries.Length; i++)
+            //for(int i = 0; i < countries.Length; i++)
+            //{
+            //    Console.WriteLine("Please enter a country name: ");
+            //    countries[i] = Console.ReadLine();
+            //}
+
+            //var end = DateTime.Now;
+            //var duration = end - start;
+
+            //Console.WriteLine("It took you {0} to name 25 countries!", duration);
+
+            //Console.WriteLine("Here's every other country you named: ");
+
+            //for(int i =0; i < countries.Length; i++)
+            //{
+            //    int divisionTest = i % 2;
+            //    if(divisionTest ==0)
+            //    {
+            //        Console.WriteLine(countries[i]);
+            //    }
+
+            //} 
+
+            //Loop practice in class: get user input of 10 numbers, sum them and find average.
+            Console.WriteLine("Please enter the length of your array: ");
+            int lengthArray = int.Parse(Console.ReadLine());
+
+            int[] myNumbers = new int[lengthArray];
+            for (int i = 0; i < myNumbers.Length; i++)
             {
-                Console.WriteLine("Please enter a country name: ");
-                countries[i] = Console.ReadLine();
+                Console.WriteLine("Enter a number: ");
+                myNumbers[i] = int.Parse(Console.ReadLine());
             }
-
-            var end = DateTime.Now;
-            var duration = end - start;
-
-            Console.WriteLine("It took you {0} to name 25 countries!", duration);
-
-            Console.WriteLine("Here's every other country you named: ");
-
-            for(int i =0; i < countries.Length; i++)
+            double sum = 0;
+            for (int i = 0; i < myNumbers.Length; i++)
             {
-                int divisionTest = i % 2;
-                if(divisionTest ==0)
-                {
-                    Console.WriteLine(countries[i]);
-                }
-
-            } 
-            
+                sum = sum + myNumbers[i];
+            }
+            Console.WriteLine("Sum of all the numbers: " + sum);
+            double average = sum / myNumbers.Length;
+            Console.WriteLine("The average of the numbers is " + average);
 
 
         }
